@@ -1,0 +1,6 @@
+### Intellij
+.idea/
+
+### My Custom Stuff
+.env*
+node_modules/

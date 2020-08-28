@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Sample Form Page for Form Data Processor</title>
+</head>
+<body>
+<div style="text-align:center">
+    <p>
+        <h3>Form Processor Demo</h3>
+    </p>
+</div>
+<div id="wrapper" style="margin: auto; width: 50%;">
+    <form id="feedbackForm" method="post" action="/form">
+        <p>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        </p>
+        <p>
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email"><br>
+        </p>
+        <p>
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone"><br>
+        </p>
+        <p>
+        <label for="feedback">Feedback:</label><br>
+        <textarea id="feedback" name="feedback" form="feedbackForm" rows="10" cols="50">
+        </textarea><br>
+        </p>
+        <input type="submit">
+    </form>
+</div>
+</body>
+</html>
