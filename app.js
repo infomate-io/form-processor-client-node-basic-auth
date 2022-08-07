@@ -10,15 +10,15 @@ process.on('uncaughtException', function(err) {
 });
 
 const formsUrl = process.env.FORMS_URL;
-const formsUsername = process.env.FORMS_USERNAME;
-const formsPassword = process.env.FORMS_PASSWORD;
+const formsAccessKey = process.env.FORMS_ACCESS_KEY;
+const formsSecretKey = process.env.FORMS_SECRET_KEY;
 
 if (
-    !formsUsername ||
-    !formsPassword ||
+    !formsAccessKey ||
+    !formsSecretKey ||
     !formsUrl
 ) {
-    throw new Error(`must set environment variables FORMS_USERNAME, FORMS_PASSWORD, FORMS_URL`);
+    throw new Error(`must set environment variables FORMS_ACCESS_KEY, FORMS_SECRET_KEY, FORMS_URL`);
 }
 
 const userPass64 = Buffer.from(formsUsername + ":" + formsPassword).toString('base64');
